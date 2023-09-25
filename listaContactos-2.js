@@ -3,7 +3,7 @@ const listaDeContactos = [
     Nombre: "Diana Karolina",
     Apellido: "Acosta Romero",
     Numero: 3219309832,
-    Direccion: "Avenida calle 116#80a-25, Bogota",
+    Direccion: "Avenida calle 116#71a-25, Bogota",
     Correo: "dianakarolinaacostaromero17@gmail.com",
   },
   {
@@ -37,20 +37,49 @@ const listaDeContactos = [
 ];
 
 function añadirContacto(Nombre, Apellido, Numero, Direccion, Correo) {
-  const nuevoContacto = {
-    Nombre: Nombre,
-    Apellido: Apellido,
-    Numero: Numero,
-    Direccion: Direccion,
-    Correo: Correo,
-  };
-  listaDeContactos.push(nuevoContacto);
+  listaDeContactos.push(Nombre:Nombre, Apellido:Apellido, Numero:Numero, Direccion:Direccion, Correo:Correo);
+  console.log(
+    `Contacto" ${(Nombre, Apellido, Numero, Direccion, Correo)} "agregado.`
+  );
 }
+
+function borrarContacto(Nombre, Apellido, Numero, Direccion, Correo) {
+  const index = listaDeContactos.indexOf(
+    Nombre,
+    Apellido,
+    Numero,
+    Direccion,
+    Correo
+  );
+  if (index !== -1) {
+    listaDeContactos.splice(index, 1);
+    console.log(
+      `Contacto " ${(Nombre, Apellido, Numero, Direccion, Correo)}"eliminado.`
+    );
+  } else {
+    console.log(
+      `El contatco "${
+        (Nombre, Apellido, Numero, Direccion, Correo)
+      }" nose encontro en la lista`
+    );
+  }
+}
+
+function imprimirListaDeContactos() {
+  console.log("LISTA DE CONTACTOS:");
+  for (const contacto of listaDeContactos) {
+    console.log(contacto);
+  }
+}
+
 añadirContacto(
   "Mauricio Alejandro",
   "Acosta Garavito",
-  3104066350,
-  "Calle 26 #15-05, Cumaaral",
+  3105895420,
+  "Manzana C, Casa 12, Cumaral",
   "macosta19@gmail.com"
 );
-console.log(`Contacto "${añadirContacto}" agregado.`);
+imprimirListaDeContactos();
+
+/* borrarContacto ("Diana Karolina", "Acosta Romero", 3219309832, "Avenida calle 116#71a-25, Bogota", "dianakarolinaacostaromero17@gmail.com");
+imprimirListaDeContactos(); */

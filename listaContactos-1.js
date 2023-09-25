@@ -1,38 +1,39 @@
 const listaDeContactos = [
   {
-    nombreyApellido: "Diana Karolina Acosta Romero",
+    nombreApellido: "Diana Karolina Acosta Romero",
   },
   {
-    nombreyApellido: "Maria Paola Garzon Vargas",
+    nombreApellido: "Maria Paola Garzon Vargas",
   },
   {
-    nombreyApellido: "Fabian Stiven Rodriguez Martinez",
+    nombreApellido: "Fabian Stiven Rodriguez Martinez",
   },
   {
-    nombreyApellido: "Kevin Camilo Cortez Fonseca",
+    nombreApellido: "Kevin Camilo Cortez Fonseca",
   },
   {
-    nombreyApellido: "Leydi Marcela Romero",
+    nombreApellido: "Leydi Marcela Romero",
   },
 ];
 
-function añadirContacto(nombreyApellido) {
-  listaDeContactos.push(nombreyApellido);
-  console.log(`Contacto" ${nombreyApellido} "agregado.`);
+function añadirContacto(nombreApellido) {
+  listaDeContactos.push(nombrApellido);
+  console.log(`Contacto" ${nombreApellido} "agregado.`);
 }
 
-function borrarContacto(nombreyApellido) {
-  const index = listaDeContactos.indexOf(nombreyApellido);
+function borrarContacto(nombreApellido) {
+  const index = listaDeContactos.indexOf(nombreApellido);
   if (index !== -1) {
     listaDeContactos.splice(index, 1);
-    console.log(`Contacto " ${nombreyApellido}"eliminado.`);
+    console.log(`Contacto " ${nombreApellido}"eliminado.`);
   } else {
-    console.log(`El contatco "${nombreyApellido}" nose encontro en la lista`);
+    console.log(`El contatco "${nombreApellido}" nose encontro en la lista`);
   }
 }
 
 function imprimirListaDeContactos() {
   console.log("LISTA DE CONTACTOS:");
+  gi;
   for (const contacto of listaDeContactos) {
     console.log(contacto);
   }
