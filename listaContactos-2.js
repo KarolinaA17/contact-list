@@ -37,30 +37,35 @@ const listaDeContactos = [
 ];
 
 function añadirContacto(Nombre, Apellido, Numero, Direccion, Correo) {
-  listaDeContactos.push(Nombre:Nombre, Apellido:Apellido, Numero:Numero, Direccion:Direccion, Correo:Correo);
+  const nuevoContacto = {
+    Nombre: Nombre,
+    Apellido: Apellido,
+    Numero: Numero,
+    Direccion: Direccion,
+    Correo: Correo,
+  };
+  listaDeContactos.push(nuevoContacto);
   console.log(
     `Contacto" ${(Nombre, Apellido, Numero, Direccion, Correo)} "agregado.`
   );
 }
 
 function borrarContacto(Nombre, Apellido, Numero, Direccion, Correo) {
-  const index = listaDeContactos.indexOf(
-    Nombre,
-    Apellido,
-    Numero,
-    Direccion,
-    Correo
-  );
-  if (index !== -1) {
-    listaDeContactos.splice(index, 1);
-    console.log(
-      `Contacto " ${(Nombre, Apellido, Numero, Direccion, Correo)}"eliminado.`
-    );
+  const eliminarContacto = {
+    Nombre: Nombre,
+    Apellido: Nombre,
+    Numero: Numero,
+    Direccion: Direccion,
+    Correo: Correo,
+  };
+  if (eliminarContacto !== -1) {
+    listaDeContactos.splice(eliminarContacto, 1);
+    console.log(`Contacto " ${Nombre}"eliminado.`);
   } else {
     console.log(
-      `El contatco "${
+      `El contacto "${
         (Nombre, Apellido, Numero, Direccion, Correo)
-      }" nose encontro en la lista`
+      }" no se encontro en la lista`
     );
   }
 }
@@ -71,7 +76,7 @@ function imprimirListaDeContactos() {
     console.log(contacto);
   }
 }
-
+/*
 añadirContacto(
   "Mauricio Alejandro",
   "Acosta Garavito",
@@ -79,7 +84,13 @@ añadirContacto(
   "Manzana C, Casa 12, Cumaral",
   "macosta19@gmail.com"
 );
-imprimirListaDeContactos();
-
-/* borrarContacto ("Diana Karolina", "Acosta Romero", 3219309832, "Avenida calle 116#71a-25, Bogota", "dianakarolinaacostaromero17@gmail.com");
 imprimirListaDeContactos(); */
+
+borrarContacto(
+  "Diana Karolina",
+  "Acosta Romero",
+  3219309832,
+  "Avenida calle 116#71a-25, Bogota",
+  "dianakarolinaacostaromero17@gmail.com"
+);
+imprimirListaDeContactos();
