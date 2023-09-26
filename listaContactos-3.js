@@ -41,7 +41,7 @@ const listaDeContactos = [
   },
 ];
 
-function añadirContacto(Nombre, Apellido, Numero, Direccion, Correo) {
+function añadirContacto(id, Nombre, Apellido, Numero, Direccion, Correo) {
   const nuevoContacto = {
     id: id,
     Nombre: Nombre,
@@ -83,16 +83,40 @@ function imprimirListaDeContactos() {
     console.log(contacto);
   }
 }
-/*
+
+function actualizarContacto(
+  id,
+  nuevoNombre,
+  nuevoApellido,
+  nuevoNumero,
+  nuevaDireccion,
+  nuevoCorreo
+) {
+  const contacto = listaDeContactos.find((contacto) => contacto.id === id);
+  if (contacto) {
+    contacto.Nombre = nuevoNombre;
+    contacto.Apellido = nuevoApellido;
+    contacto.Numero = nuevoNumero;
+    contacto.Direccion = nuevaDireccion;
+    contacto.Correo = nuevoCorreo;
+    console.log(
+      `Contacto actualizado: ${contacto.Nombre}, ${contacto.Apellido},${contacto.Numero}, ${contacto.Direccion},${contacto.Correo}`
+    );
+  } else {
+    console.log("El contacto no se encontró en la lista.");
+  }
+}
+
 añadirContacto(
+  6,
   "Mauricio Alejandro",
   "Acosta Garavito",
   3105895420,
   "Manzana C, Casa 12, Cumaral",
   "macosta19@gmail.com"
 );
-imprimirListaDeContactos(); */
-
+imprimirListaDeContactos();
+/*
 borrarContacto(
   "Diana Karolina",
   "Acosta Romero",
@@ -100,4 +124,16 @@ borrarContacto(
   "Avenida calle 116#71a-25, Bogota",
   "dianakarolinaacostaromero17@gmail.com"
 );
-imprimirListaDeContactos();
+imprimirListaDeContactos(); */
+
+/*actualizarContacto(
+  2,
+  "Maria Paula",
+  "Gomez Valdez",
+  3125984563,
+  "paula.valdez15@gmail.com",
+  "Calle 17 #15-12, Cumaral"
+);
+console.log(listaDeContactos);
+
+imprimirListaDeContactos();*/
