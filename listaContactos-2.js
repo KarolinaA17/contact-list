@@ -41,7 +41,7 @@ const listaDeContactos = [
   },
 ];
 
-function añadirContacto(Nombre, Apellido, Numero, Direccion, Correo) {
+function añadirContacto(id, Nombre, Apellido, Numero, Direccion, Correo) {
   const nuevoContacto = {
     id: id,
     Nombre: Nombre,
@@ -83,21 +83,23 @@ function imprimirListaDeContactos() {
     console.log(contacto);
   }
 }
-/*
+
 añadirContacto(
+  6,
   "Mauricio Alejandro",
   "Acosta Garavito",
   3105895420,
   "Manzana C, Casa 12, Cumaral",
   "macosta19@gmail.com"
 );
-imprimirListaDeContactos(); */
-
+imprimirListaDeContactos();
+/*
 borrarContacto(
+    1,
   "Diana Karolina",
   "Acosta Romero",
   3219309832,
   "Avenida calle 116#71a-25, Bogota",
   "dianakarolinaacostaromero17@gmail.com"
 );
-imprimirListaDeContactos();
+imprimirListaDeContactos(); */

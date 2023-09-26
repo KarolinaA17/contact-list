@@ -118,6 +118,7 @@ añadirContacto(
 imprimirListaDeContactos();
 /*
 borrarContacto(
+    1,
   "Diana Karolina",
   "Acosta Romero",
   3219309832,
